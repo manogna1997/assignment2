@@ -32,11 +32,9 @@ export default class AddProduct extends Component {
                     this.state.newProd.cat, event.target.value)
             });
         }
-        console.log(name + " -> " + event.target.value)
 
     }
     handleSubmit(event) {
-        console.log(name + " -> " + this.state.newProd.toString())
         event.preventDefault();
         this.props.saveProd(this.state.newProd);
         // this.setState({ newProd: new Product("", "", "Jeans", "") });

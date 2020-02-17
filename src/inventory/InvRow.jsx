@@ -9,10 +9,10 @@ export default class InvRow extends Component {
                 <td>{this.props.data.price}</td>
                 <td>{this.props.data.cat}</td>
                 <td>
-                    <a href={this.props.data.image} target="_blank">
-                        <img src={this.props.data.image} />
-                    </a>
-                    {/* <img src={this.props.data.image} /> */}
+                    {this.props.data.image != "" ? (
+                        <a href={this.props.data.image} target="_blank">View
+                        </a>
+                    ) : ("N/A")}
                 </td>
             </tr>
         );
