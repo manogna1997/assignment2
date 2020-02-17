@@ -3,6 +3,10 @@ import Product from './Pojo.jsx'
 
 // https://images.pexels.com/photos/996329/pexels-photo-996329.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260
 export default class AddProduct extends Component {
+    /**
+     * 
+     * @param {default init} props 
+     */
     constructor(props) {
         super(props);
         this.state = { newProd: new Product("", "", "Jeans", "") };
@@ -10,6 +14,11 @@ export default class AddProduct extends Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+    /**
+     * 
+     * @param {handle chnages} event 
+     * @param {*} name 
+     */
     handleChange(event, name) {
         if (name == "name") {
             this.setState({ newProd: new Product(event.target.value, this.state.newProd.price, this.state.newProd.cat, this.state.newProd.image) });
@@ -52,6 +61,7 @@ export default class AddProduct extends Component {
                             <option value="Jackets">Jackets</option>
                             <option value="Sweaters">Sweaters</option>
                             <option value="Accessories">Accessories </option>
+                            <option value="`.">`.</option>
                         </select>
                         <input id="12years" type="text" value={"$ " + this.state.newProd.price} onChange={(e) => this.handleChange(e, "price")} />
                     </div>
