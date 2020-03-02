@@ -1,5 +1,5 @@
 {
-  "name": "cs648assignement1",
+  "name": "assignement3",
   "version": "1.0.0",
   "description": "assignment one submission for cs648",
   "main": "server.js",
@@ -31,7 +31,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/manogna1997/cs648assignement1.git"
+    "url": "git+https://github.com/manogna1997/assignement3.git"
   },
   "keywords": [
     "manu",
@@ -41,14 +41,18 @@
   "author": "Manogna Podishetty",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/manogna1997/cs648assignement1/issues"
+    "url": "https://github.com/manogna1997/assignement3/issues"
   },
-  "homepage": "https://github.com/manogna1997/cs648assignement1#readme",
+  "homepage": "https://github.com/manogna1997/assignement3#readme",
   "dependencies": {
+    "@apollo/client": "^3.0.0-beta.38",
+    "apollo-server": "^2.10.1",
+    "apollo-server-express": "^2.10.1",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "dotenv": "^6.2.0",
     "express": "^4.17.1",
+    "graphql": "^14.6.0",
     "path": "^0.12.7",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"

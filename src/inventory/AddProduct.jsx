@@ -21,15 +21,15 @@ export default class AddProduct extends Component {
      */
     handleChange(event, name) {
         if (name == "name") {
-            this.setState({ newProd: new Product(event.target.value, this.state.newProd.price, this.state.newProd.cat, this.state.newProd.image) });
+            this.setState({ newProd: new Product(event.target.value, this.state.newProd.price, this.state.newProd.category, this.state.newProd.image) });
         } else if (name == "cat") {
-            this.setState({ newProd: new Product(this.state.newProd.prodName, this.state.newProd.price, event.target.value, this.state.newProd.image) });
+            this.setState({ newProd: new Product(this.state.newProd.name, this.state.newProd.price, event.target.value, this.state.newProd.image) });
         } else if (name == "price") {
-            this.setState({ newProd: new Product(this.state.newProd.prodName, event.target.value.replace("$ ", ""), this.state.newProd.cat, this.state.newProd.image) });
+            this.setState({ newProd: new Product(this.state.newProd.name, event.target.value.replace("$ ", ""), this.state.newProd.category, this.state.newProd.image) });
         } else if (name == "image") {
             this.setState({
-                newProd: new Product(this.state.newProd.prodName, this.state.newProd.price,
-                    this.state.newProd.cat, event.target.value)
+                newProd: new Product(this.state.newProd.name, this.state.newProd.price,
+                    this.state.newProd.category, event.target.value)
             });
         }
 
@@ -53,13 +53,12 @@ export default class AddProduct extends Component {
                     </div>
                     <div className="flex-container">
                         {/* <input type="text" list="eventslist"   required /> */}
-                        <select id="eventslist" defaultValue={this.state.newProd.cat} onChange={(e) => this.handleChange(e, "cat")}>
+                        <select id="eventslist" defaultValue={this.state.newProd.category} onChange={(e) => this.handleChange(e, "cat")}>
                             <option value="Shirts">Shirts</option>
                             <option value="Jeans">Jeans</option>
                             <option value="Jackets">Jackets</option>
                             <option value="Sweaters">Sweaters</option>
-                            <option value="Accessories">Accessories </option>
-                            <option value="`.">`.</option>
+                            <option value="Accessories">Accessories</option>
                         </select>
                         <input id="12years" type="text" value={"$ " + this.state.newProd.price} onChange={(e) => this.handleChange(e, "price")} />
                     </div>
@@ -74,7 +73,7 @@ export default class AddProduct extends Component {
                         </div>
                     </div>
                     <div className="flex-container">
-                        <input typeof="text" value={this.state.newProd.prodName} onChange={(e) => this.handleChange(e, "name")} />
+                        <input typeof="text" value={this.state.newProd.name} onChange={(e) => this.handleChange(e, "name")} />
                         <input typeof="text" value={this.state.newProd.image} onChange={(e) => this.handleChange(e, "image")} />
                     </div>
                     <div className="align-center">

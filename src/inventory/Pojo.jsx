@@ -1,9 +1,9 @@
 export default class Product {
 
     constructor(name, prx, cata, img) {
-        this.prodName = name;
+        this.name = name;
         this.price = prx
-        this.cat = cata
+        this.category = cata
         this.image = img
     }
      toString() {

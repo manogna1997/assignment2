@@ -5,9 +5,9 @@ export default class InvRow extends Component {
         return (
             <tr>
                 <td>{this.props.keyId + 1}</td>
-                <td>{this.props.data.prodName}</td>
+                <td>{this.props.data.name}</td>
                 <td>{this.props.data.price}</td>
-                <td>{this.props.data.cat}</td>
+                <td>{JSON.stringify( this.props.data.category)}</td>
                 <td>
                     {this.props.data.image != "" ? (
                         <a href={this.props.data.image} target="_blank">View
